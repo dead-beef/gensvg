@@ -1,0 +1,18 @@
+{
+	"type": "wordcloud",
+
+	"input": "data.json",
+	"output": "wordcloud.svg",
+
+	"debug": true,
+
+	"resize": true,
+	"links": false,
+
+	"font": "monospace",
+	"padding": 10,
+
+	"minWidth": 512,
+	"minHeight": 512,
+	"precision": 128
+}

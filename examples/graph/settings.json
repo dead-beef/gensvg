@@ -1,0 +1,27 @@
+{
+	"type": "graph",
+	"input": "data.json",
+	"output": "graph{N}.svg",
+
+	"width": 512,
+	"height": 512,
+
+	"node_id": false,
+	"resize": false,
+	"links": false,
+
+	"gravity": 0.05,
+	"distance": 100,
+	"charge": -200,
+
+	"max_ticks": 250,
+	"save_interval": 50,
+
+	"debug": true,
+
+	"style": {
+		"node": "stroke:#ddd;fill:#555;stroke-width:3px;",
+		"text": "stroke:#000;fill:#000,stroke-width:1px;",
+		"link":	"stroke:#aaa;stroke-opacity:0.75;"
+	}
+}

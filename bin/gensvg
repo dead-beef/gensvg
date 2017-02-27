@@ -1,0 +1,73 @@
+#!/usr/bin/env node
+
+'use strict'
+
+function checkSettings(settings, defaults, name)
+{
+	if(name === undefined) name = 'settings';
+	for(let k in defaults)
+	{
+		if(settings[k] === undefined)
+		{
+			if(defaults[k] === null)
+			{
+				console.error(name.concat('.', k), 'is undefined');
+				process.exit(1);
+			}
+			else
+			{
+				settings[k] = defaults[k];
+			}
+		}
+		else if(typeof settings[k] === 'object'
+		        && typeof defaults[k] === 'object')
+		{
+			checkSettings(settings[k], defaults[k], name.concat('.', k));
+		}
+	}
+	return settings;
+}
+
+if(process.argv.length != 3)
+{
+	console.error('Usage:', process.argv[1], '<settings file>');
+	process.exit(1);
+}
+
+let jsdom     = require('jsdom');
+let fs        = require('fs');
+let path      = require('path');
+let settings  = JSON.parse(fs.readFileSync(process.argv[2]));
+let generator = require('../lib/' + settings.type);
+
+settings = checkSettings(settings, generator.defaults);
+let dir = path.dirname(process.argv[2]);
+for(let k of [ 'input', 'output' ])
+{
+	if(!settings[k].startsWith('/'))
+	{
+		settings[k] = path.join(dir, settings[k]);
+	}
+}
+
+jsdom.env(
+	`<html>
+		<body>
+			<svg xmlns="http://www.w3.org/2000/svg"
+			     xmlns:xlink="http://www.w3.org/1999/xlink">
+			</svg>
+		</body>
+	</html>`,
+	generator.dependencies,
+	(err, window) => {
+		if(err)
+		{
+			console.error(err);
+			process.exit(1);
+		}
+		else
+		{
+			generator.generate(settings, window);
+		}
+	}
+);

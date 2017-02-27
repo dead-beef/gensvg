@@ -1,0 +1,21 @@
+{
+	"name": "gensvg",
+	"version": "1.0.0",
+	"description": "",
+	"main": "lib/index.js",
+	"bin": {
+		"gensvg": "bin/gensvg"
+	},
+	"engines" : {
+		"node" : ">=4.7.2"
+	},
+	"dependencies": {
+		"canvas": "^1.6.2",
+		"jsdom": "^9.9.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dead-beef/gensvg"
+	},
+	"license": "BSD-3-Clause"
+}

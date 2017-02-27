@@ -1,0 +1,27 @@
+{
+	"nodes": [
+		{ "name": "A", "value": 8 },
+		{ "name": "B", "value": 10 },
+		{ "name": "C", "value": 12 },
+		{ "name": "D", "value": 14 },
+		{ "name": "E", "value": 16 },
+		{ "name": "F", "value": 9 },
+		{ "name": "G", "value": 9 },
+		{ "name": "H", "value": 9 }
+	],
+	"links": [
+		{ "source": 0, "target": 1, "value": 6 },
+		{ "source": 0, "target": 2, "value": 5 },
+		{ "source": 0, "target": 3, "value": 4 },
+		{ "source": 0, "target": 4, "value": 3 },
+		{ "source": 1, "target": 2, "value": 5 },
+		{ "source": 1, "target": 3, "value": 4 },
+		{ "source": 1, "target": 4, "value": 3 },
+		{ "source": 2, "target": 3, "value": 4 },
+		{ "source": 2, "target": 4, "value": 3 },
+		{ "source": 3, "target": 4, "value": 3 },
+		{ "source": 5, "target": 6, "value": 9 },
+		{ "source": 6, "target": 7, "value": 9 },
+		{ "source": 5, "target": 7, "value": 9 }
+	]
+}
