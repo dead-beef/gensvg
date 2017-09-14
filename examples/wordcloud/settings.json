@@ -11,6 +11,7 @@
 
 	"font": "monospace",
 	"padding": 10,
+	"randomColors": false,
 
 	"minWidth": 512,
 	"minHeight": 512,
