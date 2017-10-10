@@ -2,12 +2,25 @@
   "name": "gensvg",
   "version": "1.0.0",
   "author": "dead-beef",
+  "contributors": [],
   "license": "BSD-3-Clause",
-  "private": true,
+  "private": false,
   "description": "SVG generator",
+  "keywords": [
+    "cli",
+    "command",
+    "svg",
+    "generator",
+    "graph",
+    "wordcloud"
+  ],
+  "homepage": "https://github.com/dead-beef/gensvg",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dead-beef/gensvg"
+  },
+  "bugs": {
+    "url": "https://github.com/dead-beef/gensvg/issues"
   },
   "main": "lib/index.js",
   "bin": {
