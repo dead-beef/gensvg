@@ -1,5 +1,15 @@
 # gensvg
 
+[![npm](https://img.shields.io/npm/v/gensvg.svg)](
+    https://www.npmjs.com/package/gensvg
+) [![node](https://img.shields.io/node/v/gensvg.svg)](
+    https://nodejs.org/
+) [![Libraries.io for GitHub](https://img.shields.io/librariesio/github/dead-beef/gensvg.svg)](
+    https://libraries.io/npm/gensvg/
+) [![license](https://img.shields.io/github/license/dead-beef/gensvg.svg)](
+    https://github.com/dead-beef/gensvg/blob/master/LICENSE
+)
+
 ## Overview
 
 SVG generator.
